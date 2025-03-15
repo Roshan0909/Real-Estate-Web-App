@@ -5,6 +5,26 @@
 {% block title %} | About Us {% endblock %}
 
 {% block content %}
+<head>
+  <style>
+    .card-img-top {
+    width: 100%!important;
+    height: 350px!important;; /* Fixed height */
+    object-fit: cover!important;; /* Ensures the image maintains aspect ratio and fills the space */
+    border-top-left-radius: 8px!important;; /* Optional: Adjusts border radius to match the card */
+    border-top-right-radius: 8px!important;;
+}
+.rounded-circle {
+    width: 150px!important;  /* Fixed width */
+    height: 150px!important; /* Fixed height */
+    object-fit: cover!important; /* Ensures image fills the circle properly */
+    border-radius: 50%!important; /* Maintains perfect circular shape */
+    border: 3px solid #ddd!important; /* Optional: Adds a light border */
+}
+
+
+  </style>
+</head>
 <section id="showcase-inner" class="py-5 text-white">
     <div class="container">
       <div class="row text-center">
