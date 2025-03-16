@@ -7,6 +7,8 @@
 {% block content %}
 
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
   <style>
     .card-img-top {
       width: 100% !important;
@@ -34,6 +36,63 @@
       /* Maintains perfect circular shape */
       border: 3px solid #ddd !important;
       /* Optional: Adds a light border */
+    }
+
+    /* Contact details styling */
+    .contact-item {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .contact-item i {
+      margin-right: 10px;
+      color: #FFD700;
+    }
+
+    .contact-item a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .contact-item:hover {
+      transform: scale(1.1);
+    }
+
+    .contact-item a:hover {
+      color: #FFD700;
+    }
+
+    /* Social Media Icons Styling */
+    .social-icon {
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 1.8rem;
+      color: white;
+      transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.2);
+    }
+
+    /* Hover Effects with Brand Colors */
+    .facebook:hover {
+      color: #1877F2;
+    }
+
+    .twitter:hover {
+      color: #1DA1F2;
+    }
+
+    .instagram:hover {
+      color: #E4405F;
+    }
+
+    .linkedin:hover {
+      color: #0077B5;
     }
   </style>
 </head>
@@ -132,6 +191,28 @@
         <p>No Realtors Available</p>
       </div>
       {% endif %}
+    </div>
+  </div>
+</section>
+<section id="contact" class="py-5 text-white" style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);">
+  <div class="container text-center">
+    <h2 class="mb-4">Get In Touch</h2>
+    <p class="lead">We are here to assist you. Reach out to us anytime!</p>
+
+    <div class="mt-4">
+      <p class="contact-item">
+        <i class="fa-solid fa-phone"></i> <a href="tel:+919003588454">+91 90035 88454</a>
+      </p>
+      <p class="contact-item">
+        <i class="fa-solid fa-envelope"></i> <a href="mailto:richhomes.2025@gmail.com">richhomes.2025@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="mt-4">
+      <a href="your-facebook-link" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="your-twitter-link" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+      <a href="your-instagram-link" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+      <a href="your-linkedin-link" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
     </div>
   </div>
 </section>
