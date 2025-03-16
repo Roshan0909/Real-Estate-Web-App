@@ -10,6 +10,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <style>
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
     .card-img-top {
       width: 100% !important;
       height: 350px !important;
@@ -96,7 +107,7 @@
     }
   </style>
 </head>
-<section id="showcase-inner" class="py-5 text-white">
+<section id="showcase-inner" class="py-5 text-white fade-in">
   <div class="container">
     <div class="row text-center">
       <div class="col-md-12">
@@ -125,7 +136,7 @@
   </div>
 </section>
 
-<section id="about" class="py-4">
+<section id="about" class="py-4 fade-in">
   <div class="container">
     <div class="row">
       <div class="col-md-8">
@@ -165,7 +176,7 @@
 </section>
 
 <!-- Team -->
-<section id="team" class="py-5">
+<section id="team" class="py-5 fade-in">
   <div class="container">
     <h2 class="text-center">Our Team</h2>
     <div class="row text-center">
@@ -216,5 +227,21 @@
     </div>
   </div>
 </section>
+
+<script>
+  window.onload = function() {
+    const fadeInElements = document.querySelectorAll(".fade-in");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    fadeInElements.forEach(el => observer.observe(el));
+  };
+</script>
 
 {% endblock %}
